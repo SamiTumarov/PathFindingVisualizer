@@ -95,15 +95,15 @@ class Menu:
     def draw(self):
         """ Draws the menu onto the screen """
         # Button connector 0-1-2-3-4-5 (The dashes in between)
-        rect(self.display, (32, 178, 170), (850, 410, 280, 15))
+        rect(self.display, (32, 178, 170), (870, 410, 280, 15))
 
         # Actual buttons
-        self.sizes = [Button(40, 35, DEFAULT_COLOR, 840 + x * 50, 400, str(x)) for x in range(6)]
+        self.sizes = [Button(40, 35, DEFAULT_COLOR, 860 + x * 50, 400, str(x)) for x in range(6)]
         self.sizes[1].change_color(self.display, SELECTED_COLOR)
         for btn in self.sizes:
             btn.draw(self.display)
 
-        self.start = Button(150, 50, DEFAULT_COLOR, 950, 200, "Start")
+        self.start = Button(150, 50, DEFAULT_COLOR, 920, 200, "Start")
         self.start.draw(self.display)
 
     def handle_event(self, event):

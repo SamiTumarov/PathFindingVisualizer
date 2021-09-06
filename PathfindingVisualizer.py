@@ -24,6 +24,7 @@ class App:
         pygame.font.init()
         self.display = pygame.display.set_mode((1200, WIDTH))
         self.display.fill(WHITE)
+        pygame.display.set_caption("PathFinding Visualization")
 
         self.rows = 10
 
